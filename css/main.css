@@ -1,0 +1,210 @@
+/* Start global Rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "roboto", sans-serif;
+}
+:root {
+  --dark: #19283f;
+  --mint: #33d1cc;
+  --mint2: #eff7fa;
+  --blue: #0d6efd;
+  --blue2: #014dc0;
+  --yellow: #ffc60b;
+}
+.main-btn {
+  background-color: var(--blue);
+  color: white;
+}
+.main-btn:hover {
+  background-color: var(--blue2);
+  color: white;
+}
+.main-title svg {
+  color: var(--yellow);
+}
+.main-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--mint);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* end global Rules */
+/* Start navbar */
+.navbar {
+  background-color: var(--dark);
+}
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+.navbar-brand:hover {
+  color: var(--mint);
+}
+.navbar .navbar-toggler {
+  font-size: 25px;
+  color: white;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  color: var(--mint);
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+  color: var(--mint);
+}
+.navbar .search {
+  border-left: 1px solid var(--mint);
+}
+.navbar .search svg {
+  color: var(--mint);
+}
+/* end navbar */
+/* start Landing */
+.landing {
+  background-color: var(--dark);
+  min-height: calc(100vh - 72px);
+}
+@media (max-width: 991px) {
+  .landing {
+    min-height: calc(100vh - 56px);
+  }
+}
+/* End Landing */
+/* Start Features */
+.features .icon-holder {
+  height: 200px;
+}
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon-holder .number {
+  font-size: 10rem;
+  color: var(--mint2);
+}
+.features .icon-holder .icon {
+  color: var(--mint);
+}
+.features .feat h4 {
+  color: var(--yellow);
+}
+/* End Features */
+/* Start Work*/
+.work {
+  background-color: var(--mint2);
+}
+.work ul {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 40px;
+  padding: 1rem;
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.work ul .active {
+  background-color: var(--blue);
+  color: white;
+}
+.work ul .active:hover {
+  background-color: var(--blue2);
+}
+.work ul li:not(.active):hover {
+  color: var(--blue);
+}
+.work ul li {
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+.work .box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: #33d1cc62;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 1rem;
+  transform: translateX(calc(-100% - 5px));
+}
+.work .box:hover:before {
+  transform: translateX(0);
+}
+/* End Work */
+/* Start Stuff */
+.stuff .disc {
+  max-width: 600px;
+}
+/* End Stuff */
+/* Start Team */
+.team {
+  background-color: var(--mint2);
+}
+.team h2 {
+  color: var(--mint);
+}
+.team .container > p {
+  max-width: 600px;
+  margin: auto;
+}
+.team .box h4 {
+  background-color: var(--mint);
+  color: white;
+}
+
+/* End Team */
+/* Start Project */
+.project {
+  background-color: var(--dark);
+}
+/* End Project */
+/* Start Subscribe  */
+.subscribe {
+  background-color: var(--yellow);
+}
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+}
+.subscribe ::placeholder {
+  color: white;
+}
+.subscribe input[type="submit"] {
+  background-color: var(--dark);
+  color: var(--yellow);
+}
+/* End Subscribe */
+/* Start footer */
+.footer {
+  background-color: var(--dark);
+}
+/* End Footer */
